@@ -1,0 +1,17 @@
+version: '3.8'  # Specify the version of Docker Compose you're using
+
+services:
+  modsec_crs:
+    build: ./
+    container_name: modsec_app
+    ports:
+      - "9091:80"    # Map container port 80 to host port 9091
+      - "8000:8000"  # Map container port 8000 to host port 8000
+    environment:
+      - PARANOIA=5  # Set environment variable for ModSecurity
+      - SERVERNAME=internal-portal.corp.com
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    privileged: true  # Grant privileged mode if needed (use with caution)
+    env_file:
+      - ./env  # Load environment variables from a file
