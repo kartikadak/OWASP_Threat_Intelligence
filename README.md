@@ -22,7 +22,6 @@ This repository is organized into various directories. Below table shows the pur
 | Directory | Purpose | 
 | --- | --- | 
 | `honeytraps` | Focuses on building honeytraps and reporting threat intelligence | 
-| `mds_elk` | Shows a PoC for sending the ModSecurity Audit Logs to AWS using MLOGC in JSON|
 
 Please go to respective directories for complete documentation.
 
